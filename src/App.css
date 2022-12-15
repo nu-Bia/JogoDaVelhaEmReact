@@ -1,0 +1,97 @@
+:root{
+ --O-color:#2196f3;
+--X-color:#f44336;
+--green: #670ab8;
+-E-color:#644c78;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  font-family: sans-serif;
+  height: 100vh;
+  background-color: aquamarine;
+}
+.title{
+  text-align: center;
+  font-size: 3rem;
+  color:blue;
+  margin-bottom: 2rem;
+
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  grid-template-rows: repeat(3, 200px);
+  gap:1rem;
+}
+
+.board.Game-over {
+opacity: 0.8;
+}
+
+.cell{
+  display:grid;
+  align-items: center;
+  justify-content: center;
+
+  background-color: beige;
+  border-radius: 5px;
+  font-size: 3rem;
+  font-weight: bold;
+  color:blueviolet;
+
+  cursor:pointer;
+}
+
+.cell:not(.O):not(.X):hover{
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10 px;
+}
+/*cursor bloqueado*/
+.cell.O, .cell.X, .Game-over.cell{
+  cursor:not-allowed;
+}
+
+
+.cell.O{
+  background-color:var(--0-color);
+  }
+
+
+  .cell.X{
+    background-color: var(--X-color);
+  }
+
+  footer{
+    text-align:center;}
+  .winner-message {
+    margin:2rem;
+  }
+  .winner-message span.O{
+    color:var (--O-color);
+  }
+  .winner-message span.X{
+    color:var (--X-color);
+  }
+  .winner-message span.E{
+    color:var (--E-color);
+  }
+
+  .button{
+    padding: 0.8rem 1.5rem;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.6);
+    background-color: var(--green);
+    color:antiquewhite;
+    font-size: 1.2 rem;
+  }
